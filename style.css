@@ -1,0 +1,547 @@
+/* ===================================
+   MAD SCHOOL - RESPONSIVE STYLESHEET
+   Using Bootstrap 5 + Tailwind CSS
+   Minimum Width: 991px
+   =================================== */
+
+/* RESET & BASE STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+    color: #333;
+    overflow-x: hidden;
+    min-width: 991px;
+}
+
+/* SMOOTH SCROLLING */
+html {
+    scroll-behavior: smooth;
+}
+
+/* RESPONSIVE IMAGES */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===================================
+   HEADER SECTION
+   =================================== */
+
+header {
+    background-color: #000;
+    color: #fff;
+    position: relative;
+    z-index: 1000;
+    height: 89px;
+}
+
+/* Logo Wrapper */
+.logo-wrapper {
+    position: relative;
+}
+
+.logo-box {
+    background: #000;
+    padding: 5px 8px;
+}
+
+.logo-box img {
+    width: 116px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Logo Text */
+.logo-text {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.top-info {
+    margin-bottom: 3px;
+}
+
+.top-info img {
+    width: 95px;
+    height: auto;
+}
+
+.phone-number {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 100%;
+    color: #FFFFFF;
+}
+
+.sub-info {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    padding-top: 5px;
+    color: #FFFFFF;
+}
+
+/* Navigation Styles */
+.navbar-nav {
+    white-space: nowrap;
+    flex-wrap: nowrap !important;
+    gap: 10px;
+    height: 89px;
+}
+
+.navbar-nav .nav-item {
+    flex-shrink: 1;
+    min-width: 89px;
+    width: 89px;
+    height: 89px;
+}
+
+.navbar-nav .nav-link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #FFFFFF;
+    padding: 0 32px;
+    height: 89px;
+    width: 89px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, color 0.3s ease, font-size 0.3s ease, padding 0.3s ease;
+    -webkit-tap-highlight-color: transparent;
+    white-space: nowrap;
+    flex-shrink: 1;
+    min-width: fit-content;
+}
+
+.navbar-nav .nav-link.active {
+    background-color: #fcda00;
+    color: #000;
+}
+
+/* Mobile Toggle Button */
+.navbar-toggler {
+    border-color: #fcda00;
+    padding: 8px 12px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.25rem rgba(252, 218, 0, 0.25);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(252, 218, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* ===================================
+   RESPONSIVE DESIGN - 991px and above
+   =================================== */
+
+/* Extra Large Screens (1920px+) */
+@media (min-width: 1920px) {
+    .container-fluid {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+/* Large Desktop (1440px - 1919px) */
+@media (min-width: 1440px) and (max-width: 1919px) {
+    .container-fluid {
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+}
+
+/* Desktop (1200px - 1439px) */
+@media (min-width: 1200px) and (max-width: 1439px) {
+    .container-fluid {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 0 20px;
+        font-size: 17px;
+    }
+    
+    .logo-box img {
+        width: 110px;
+    }
+    
+    .top-info img {
+        width: 90px;
+    }
+}
+
+/* Medium Desktop (1300px - 1439px) */
+@media (min-width: 1300px) and (max-width: 1439px) {
+    .navbar-nav .nav-link {
+        padding: 0 26px;
+        font-size: 17px;
+    }
+}
+
+/* Small Desktop (1200px - 1299px) */
+@media (min-width: 1200px) and (max-width: 1299px) {
+    .navbar-nav .nav-link {
+        padding: 0 22px;
+        font-size: 16px;
+    }
+}
+
+/* Small Desktop / Large Tablet (1100px - 1199px) */
+@media (min-width: 1100px) and (max-width: 1199px) {
+    .container-fluid {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 0 18px;
+        font-size: 15px;
+    }
+    
+    .logo-box img {
+        width: 105px;
+    }
+    
+    .top-info img {
+        width: 88px;
+    }
+    
+    .phone-number {
+        font-size: 17px;
+    }
+    
+    .sub-info {
+        font-size: 11px;
+    }
+    
+    .navbar-nav {
+        gap: 5px !important;
+    }
+}
+
+/* Large Tablet (1000px - 1099px) */
+@media (min-width: 1000px) and (max-width: 1099px) {
+    .container-fluid {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 0 15px;
+        font-size: 14px;
+    }
+    
+    .logo-box img {
+        width: 98px;
+    }
+    
+    .top-info img {
+        width: 82px;
+    }
+    
+    .phone-number {
+        font-size: 16px;
+    }
+    
+    .sub-info {
+        font-size: 10px;
+    }
+    
+    .navbar-nav {
+        gap: 3px !important;
+    }
+}
+
+/* Baseline (991px - 999px) */
+@media (min-width: 991px) and (max-width: 999px) {
+    .container-fluid {
+        padding-left: 1.5%;
+        padding-right: 1.5%;
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 0 12px !important;
+        font-size: 13px !important;
+    }
+    
+    .logo-box img {
+        width: 92px;
+    }
+    
+    .top-info img {
+        width: 78px;
+    }
+    
+    .phone-number {
+        font-size: 15px;
+    }
+    
+    .sub-info {
+        font-size: 10px;
+    }
+    
+    .navbar-nav {
+        gap: 2px !important;
+    }
+    
+    .logo-wrapper {
+        transform: scale(0.95);
+    }
+}
+
+/* Exactly 991px - Critical baseline */
+@media (width: 991px) {
+    .container-fluid {
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 0 11px !important;
+        font-size: 13px !important;
+    }
+    
+    .logo-box img {
+        width: 90px;
+    }
+    
+    .top-info img {
+        width: 75px;
+    }
+    
+    .phone-number {
+        font-size: 14px;
+    }
+    
+    .navbar-nav {
+        gap: 1px !important;
+    }
+}
+
+/* ===================================
+   HERO SECTION CUSTOM STYLES
+   =================================== */
+
+.hero-gradient-tag {
+    background: linear-gradient(90deg, #b9935a 0%, #f3d278 25%, #ffe600 50%, #ffef9f 75%, #b9935a 100%);
+}
+
+.demo-gradient-bg {
+    background: linear-gradient(rgba(255, 231, 10, 1), rgba(255, 221, 0, 0.018));
+}
+
+/* Custom typography classes for hero section */
+.hero-subtitle {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.hero-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 38px;
+    font-weight: 900;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.hero-tag {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.hero-description {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.hero-contact-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.hero-phone {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20.39px;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+/* Demo form section */
+.demo-box {
+    width: 285px;
+    height: 257px;
+}
+
+.demo-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+.demo-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+.demo-form-area {
+    width: 234.46px;
+    height: 157px;
+}
+
+/* Dark section - only gradient that can't be done with utilities */
+.gradient-text {
+    background: linear-gradient(90deg, #ffed97 0%, #b08a46 26%, #fed517 62.5%, #fff9df 96%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.dark-main-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 130%;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+.dark-sub-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.feature-text {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+}
+
+.checklist-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 21px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+}
+
+.enquire-btn {
+    width: 184px;
+    height: 46px;
+}
+
+/* Info cards typography */
+.card-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+.card-desc {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+/* ===================================
+   UTILITY CLASSES
+   =================================== */
+
+.hover-effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.hover-effect::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fcda00;
+    transition: width 0.3s ease;
+}
+
+.hover-effect:hover::before {
+    width: 100%;
+}
+
+/* Remove tap highlight on mobile devices */
+a, button, input, textarea {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Hero Right Image */
+.hero-right-image img {
+    margin-left: 100px;
+}
+
+/* ===================================
+   MEDIA QUERY - Large Screens
+   =================================== */
+@media (min-width: 1440px) {
+    .hero-right-image img {
+        margin-left: 100px;
+    }
+}
+
